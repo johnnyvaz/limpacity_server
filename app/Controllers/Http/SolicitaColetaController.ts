@@ -2,7 +2,7 @@
 
 const axios = require('axios');
 
-export default class SolicitaColetasController {
+export default class SolicitaColetaController {
 
   /**
   * @swagger
@@ -34,7 +34,7 @@ export default class SolicitaColetasController {
    * @param {Response} ctx.response
    */
 
-   async store ({ request, response }) {
+   public async store ({ request, response }) {
     const payload = {
       "id": "string",
       "type": "string",
