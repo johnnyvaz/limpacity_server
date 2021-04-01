@@ -5,14 +5,13 @@
   "scripts": {
     "build": "node ace build --production",
     "start": "node server.ts",
-    "dev": "node ace serve --watch",
+    "start:dev": "node ace serve --watch",
     "lint": "eslint . --ext=.ts",
     "format": "prettier --write ."
   },
   "devDependencies": {
     "@adonisjs/assembler": "^3.0.0",
     "adonis-preset-ts": "^2.1.0",
-    "adonis-swagger": "^1.2.9",
     "eslint": "^7.23.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-adonis": "^1.3.0",
@@ -27,6 +26,8 @@
     "@adonisjs/core": "~5.0.4-preview-rc",
     "@adonisjs/lucid": "^10.0.0",
     "@adonisjs/repl": "^1.0.0",
+    "adonis5-swagger": "^1.2.1",
+    "axios": "^0.21.1",
     "luxon": "^1.26.0",
     "mysql": "^2.18.1",
     "proxy-addr": "^2.0.6",
