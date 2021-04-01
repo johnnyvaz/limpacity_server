@@ -1,8 +1,8 @@
 // import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
-
-const axios = require('axios');
+import SolicitaColetaBusiness from '../../Business/SolicitaColetaBusiness'
 
 export default class SolicitaColetaController {
+  private business: SolicitaColetaBusiness = new SolicitaColetaBusiness();
 
   /**
   * @swagger
@@ -34,25 +34,10 @@ export default class SolicitaColetaController {
    * @param {Response} ctx.response
    */
 
-   public async store ({ request, response }) {
-    const payload = {
-      "id": "string",
-      "type": "string",
-      "endereco": "string",
-      "reciclavel": true,
-      "dataLimite": "2021-03-31T02:49:41.561Z",
-      "quantidade": 0,
-      "integrationStatus": "string",
-      "creationDate": "2021-03-31T02:49:41.561Z"
-    }
-      try {
-        const res = await axios.post('http://localhost:9002/producer/api/v1/coleta', payload)
-        return res.data
-      } catch (error) {
-        error.Request
-      }
+  async store({ request, response }) {
 
-      }
-
+    const res = await this.business.postSolicita({request});
+    return res;
+  }
 
 }
