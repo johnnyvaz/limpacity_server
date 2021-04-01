@@ -20,6 +20,13 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.get('/', async () => {
-  return { hello: 'world' }
+import HealthCheck from '@ioc:Adonis/Core/HealthCheck'
+
+Route.get('/', async ({ response }) => {
+  const { report, healthy } = await HealthCheck.getReport()
+  return healthy
+    ? response.status(200).send(report)
+    : response.status(400).send(report)
 })
+
+Route.post('/api/solicitacoleta', 'SolicitaColetaController.store')
