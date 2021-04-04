@@ -34,7 +34,7 @@ export default class SolicitaColetaController {
    * @param {Response} ctx.response
    */
 
-  async store({ request, response }) {
+  async store({ request }) {
 
     const res = await this.business.postSolicita({request});
     return res;
