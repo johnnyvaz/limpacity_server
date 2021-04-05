@@ -3,15 +3,7 @@
 <node COLOR="#000000" CREATED="1617327561613" ID="ID_860381294" MODIFIED="1617327597794" TEXT="Api Gest&#xe3;o de Res&#xed;duos">
 <font NAME="SansSerif" SIZE="20"/>
 <hook NAME="accessories/plugins/AutomaticLayout.properties"/>
-<node COLOR="#0033ff" CREATED="1617327600401" ID="ID_1928693248" MODIFIED="1617327636682" POSITION="right" TEXT="BFF - Back End For Front End">
-<edge STYLE="sharp_bezier" WIDTH="8"/>
-<font NAME="SansSerif" SIZE="18"/>
-<node COLOR="#00b439" CREATED="1617332103324" ID="ID_1387431945" MODIFIED="1617332108470" TEXT="AdonisJs">
-<edge STYLE="bezier" WIDTH="thin"/>
-<font NAME="SansSerif" SIZE="16"/>
-</node>
-</node>
-<node COLOR="#0033ff" CREATED="1617327664827" FOLDED="true" ID="ID_1798638459" MODIFIED="1617387358533" POSITION="left" TEXT="Mensageria">
+<node COLOR="#0033ff" CREATED="1617327664827" ID="ID_1798638459" MODIFIED="1617624716471" POSITION="left" TEXT="Mensageria">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <node COLOR="#00b439" CREATED="1617327672869" ID="ID_1915300314" MODIFIED="1617327677623" TEXT="Rabbit MQ">
@@ -33,7 +25,7 @@
 <font NAME="SansSerif" SIZE="16"/>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1617334462613" FOLDED="true" ID="ID_1002715141" MODIFIED="1617387351462" POSITION="left" TEXT="Tipo de Processos">
+<node COLOR="#0033ff" CREATED="1617334462613" ID="ID_1002715141" MODIFIED="1617624720819" POSITION="left" TEXT="Tipo de Processos">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <node COLOR="#00b439" CREATED="1617334487606" ID="ID_1497939162" MODIFIED="1617334491520" TEXT="Ass&#xed;ncrono">
@@ -231,7 +223,7 @@
 <node COLOR="#111111" CREATED="1617622885680" ID="ID_1825803125" MODIFIED="1617623227239" TEXT="cadastro de endere&#xe7;o com busca de cep ">
 <font NAME="SansSerif" SIZE="12"/>
 </node>
-<node COLOR="#111111" CREATED="1617623389057" ID="ID_641814323" MODIFIED="1617623582072" TEXT="Insere solicita&#xe7;&#xe3;o de coleta"/>
+<node COLOR="#111111" CREATED="1617623389057" ID="ID_641814323" MODIFIED="1617624784442" TEXT="Insere solicita&#xe7;&#xe3;o de coleta( Fluxo Ass&#xed;ncrono)"/>
 <node COLOR="#111111" CREATED="1617623589403" ID="ID_1680761404" MODIFIED="1617623667257" TEXT="Comunica&#xe7;&#xe3;o com a API nos endpoints liberados para fluxo s&#xed;ncrono"/>
 <node COLOR="#111111" CREATED="1617623675101" ID="ID_1198140502" MODIFIED="1617623717599" TEXT="Cadastro de usuario"/>
 <node COLOR="#111111" CREATED="1617623719568" ID="ID_1607898888" MODIFIED="1617623744932" TEXT="Sistema ACL, Controle de Perfil de Acesso"/>
