@@ -1,4 +1,4 @@
-// import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
+import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import SolicitaColetaBusiness from '../../Business/SolicitaColetaBusiness'
 
 export default class SolicitaColetaController {
@@ -25,19 +25,12 @@ export default class SolicitaColetaController {
   *         example:
   *           message: Solicitação enviada, aguarde
   */
-  /**
-   * Create/save a new solicitacoleta.
-   * POST solicitacoletas
-   *
-   * @param {object} ctx
-   * @param {Request} ctx.request
-   * @param {Response} ctx.response
-   */
 
-  async store({ request }) {
-
-    const res = await this.business.postSolicita({request});
+  public async store({ request }: HttpContextContract) {
+    const data = request.only([
+      'material', 'endereco',"numero","municipio","cep","reciclavel","dataLimite","quantidade","integrationStatus"
+    ])
+    const res = await this.business.postSolicita({ request: data});
     return res;
   }
-
 }

@@ -30,3 +30,4 @@ Route.get('/', async ({ response }) => {
 })
 
 Route.post('/api/solicitacoleta', 'SolicitaColetaController.store')
+Route.get('/api/endereco/cep', 'EnderecoController.getCep')
