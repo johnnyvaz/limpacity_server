@@ -24,10 +24,8 @@ import HealthCheck from '@ioc:Adonis/Core/HealthCheck'
 
 Route.get('/', async ({ response }) => {
   const { report, healthy } = await HealthCheck.getReport()
-  return healthy
-    ? response.status(200).send(report)
-    : response.status(400).send(report)
+  return healthy ? response.status(200).send(report) : response.status(400).send(report)
 })
 
 Route.post('/api/solicitacoleta', 'SolicitaColetaController.store')
-Route.get('/api/endereco/cep', 'EnderecoController.getCep')
+Route.post('/api/endereco/cep', 'EnderecoController.getCep')
