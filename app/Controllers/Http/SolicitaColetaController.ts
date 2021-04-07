@@ -1,8 +1,36 @@
 import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
-import SolicitaColetaBusiness from '../../Business/SolicitaColetaBusiness'
+const axios = require('axios')
+import Env from '@ioc:Adonis/Core/Env'
+const buscaCep = require('busca-cep')
+const enderecoApirUrl = Env.get('ENDERECO_URL')
+const producerUrl = Env.get('PRODUCER_URL')
 
+export interface IObjetoColeta {
+  material: string,
+  endereco: string,
+  numero: string,
+  municipio: string,
+  estado: string,
+  cep: number,
+  reciclavel: boolean,
+  dataLimite: string,
+  quantidade: number
+}
+
+export interface IEndereco {
+    cep: string,
+    logradouro: string,
+    complemento: string,
+    bairro: string,
+    localidade: string,
+    uf: string,
+    ibge: number,
+    gia: number,
+    ddd: number,
+    siafi: number
+}
 export default class SolicitaColetaController {
-  private business: SolicitaColetaBusiness = new SolicitaColetaBusiness()
+  // private business: SolicitaColetaBusiness = new SolicitaColetaBusiness()
 
   /**
    * @swagger
@@ -25,20 +53,66 @@ export default class SolicitaColetaController {
    *         example:
    *           message: Solicitação enviada, aguarde
    */
+  public async consultaCep(cep:string){
+    var end: any;
+    await buscaCep(cep, { sync: false, timeout: 2000 })
+      .then((endereco) => {
+        end = endereco;
+        })
+      .catch((erro) => {
+        console.log(`Erro: statusCode ${erro.statusCode} e mensagem ${erro.message}`);
+      })
+      return end;
+  }
+
 
   public async store({ request }: HttpContextContract) {
-    const data = request.only([
+    const data:any = request.only([
       'material',
       'endereco',
       'numero',
       'municipio',
+      'estado',
       'cep',
       'reciclavel',
       'dataLimite',
-      'quantidade',
-      'integrationStatus',
-    ])
-    const res = await this.business.postSolicita({ request: data })
-    return res
+      'quantidade'
+    ]);
+    // Busca cep
+    const cep = data.cep.replace(/\D/g, '');
+    const endereco = await this.consultaCep(cep);
+    // Consulta se o município é habilitado
+    var cepHabilitado:any;
+    try {
+      cepHabilitado = await axios.get(enderecoApirUrl+"/codmunicipio/"+endereco.ibge);
+    } catch (error) {
+      error.statusCode
+    }
+
+    if(!cepHabilitado.data.records[0]){
+      return "Município não habilitado, não possui coletadores"
+    }
+
+    const objetoColeta: IObjetoColeta = {
+      material: data.material,
+      cep: data.cep,
+      endereco: data.endereco === undefined ? endereco.logradouro : data.endereco,
+      numero: data.numero,
+      municipio: data.municipio === undefined ? endereco.localidade : data.municipio,
+      estado: data.estado === undefined ? endereco.uf : data.estado,
+      reciclavel: data.reciclavel,
+      dataLimite: data.dataLimite,
+      quantidade: data.quantidade
+    }
+    console.log("objeto coleta: " + data.municipio );
+    var solicitaColeta: any;
+    try {
+      solicitaColeta = await axios.post(producerUrl, objetoColeta)
+      return solicitaColeta.data
+    } catch (error) {
+      error.Request
+    }
+
+    return objetoColeta
   }
 }
