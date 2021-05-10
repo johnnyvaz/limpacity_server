@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="treestyles.css" type="text/css"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--This file has been created with toxhtml.xsl--><head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><title>Ações LimpaCity</title><link rel="stylesheet" href="Ações-LimpaCity.html_files/treestyles.css" type="text/css" /><script type="text/javascript" src="Ações-LimpaCity.html_files/marktree.js"> 
+	</script></head><body><div class="basetop"><a onclick="expandAll(document.getElementById('base'))" href="#">Expand</a> -
+<a onclick="collapseAll(document.getElementById('base'))" href="#">Collapse</a></div><div class="basetext" id="base"><ul>
+	<li class="col" id="FMID_1686295140FM"><div class="nodecontent" style="color:#000000;font-size:167%;">Ações LimpaCity</div>
+		<ul class="subexp">
+	<li class="col" id="FMID_191210877FM"><div class="nodecontent" style="color:#0033ff;font-size:150%;">limpacity_server</div>
+		<ul class="subexp">
+	<li class="col" id="FMID_257077687FM"><div class="nodecontent" style="color:#00b439;font-size:133%;">Ações Necessárias</div>
+		<ul class="subexp">
+	<li class="col" id="FMID_393774577FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Entrada de Dados</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1301414635FM"><div class="boxed"><div class="nodecontent" style="color:#111111;">Validar o json de do endpoint api/v1/coleta</div><div class="note-and-attributes"><span class="note"><p>
+      Verificar se os dados de entrada serão suficientes para dar entrada na solicitação de coleta.
+    </p><p>
+      Conforme pesquisa realizada em campo e materiais pesquisados chegamos ao seguinte contrato:
+    </p><p>
+      {
+    </p><p>
+         "nomeSolicitante":
+    </p><p>
+         "email":
+    </p><p>
+         "material":
+    </p><p>
+         "endereco":
+    </p><p>
+         "numero":
+    </p><p>
+         "municipio":
+    </p><p>
+         "cep":
+    </p><p>
+         "reciclavel":
+    </p><p>
+         "dataLimite":
+    </p><p>
+         "quantidade":
+    </p><p>
+      }
+    </p></span></div></div></li></ul></li>
+	<li class="basic" id="FMID_495083765FM"><div class="boxed"><div class="nodecontent" style="color:#990000;font-size:117%;">Saída de Dados</div><div class="note-and-attributes"><span class="note"><p>
+      Verificar se as informações que o usuário irá receber se serão suficientes para que o front-end , ou a estrutura que for fazer a integração, faça o gerenciamento da espera da solicitação, pois como é um processo assíncrono, o usuário precisará aguardar um retorno do sistema.
+    </p></span></div></div></li>
+	<li class="basic" id="FMID_341121537FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Levantar os requisitos necessários integração com Front-End</div></li></ul></li>
+	<li class="col" id="FMID_1390775626FM"><div class="nodecontent" style="color:#00b439;font-size:133%;">Requisitos implementados</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1825803125FM"><div class="nodecontent" style="color:#990000;font-size:117%;">cadastro de endereço com busca de cep </div></li>
+	<li class="basic" id="FMID_641814323FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Insere solicitação de coleta( Fluxo Assíncrono)</div></li></ul></li>
+	<li class="col" id="FMID_821103977FM"><div class="nodecontent" style="color:#00b439;font-size:133%;">Tecnologia</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1654422844FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Adonisjs, Typescript</div></li></ul></li>
+	<li class="col" id="FMID_1910884500FM"><div class="nodecontent" style="color:#00b439;font-size:133%;">Problemas no Teste</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1218100407FM"><div class="boxed"><div class="nodecontent" style="color:#990000;font-size:117%;">Fazer teste de conectividade</div><div class="note-and-attributes"><span class="note"><p>
+      fazer a verificação com a api de health-check dos microserviços
+    </p><ul><li>
+        Producer
+      </li><li>
+        Api
+      </li></ul></span></div></div></li></ul></li>
+	<li class="col" id="FMID_82483220FM"><div class="nodecontent" style="color:#00b439;font-size:133%;">Requisitos Fora do Escopo</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1198140502FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Cadastro de usuario</div></li>
+	<li class="basic" id="FMID_1607898888FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Sistema ACL, Controle de Perfil de Acesso</div></li>
+	<li class="basic" id="FMID_1680761404FM"><div class="boxed"><div class="nodecontent" style="color:#990000;font-size:117%;">Comunicação com a API nos endpoints liberados para fluxo síncrono</div><div class="note-and-attributes"><span class="note"><p>
+      Este item seria implementado em um módulo de administração, que no caso não será implementado
+    </p></span></div></div></li></ul></li></ul></li>
+	<li class="col" id="FMID_543164937FM"><div class="nodecontent" style="color:#0033ff;font-size:150%;">limpacity_producer</div>
+		<ul class="subexp">
+	<li class="col" id="FMID_733638615FM"><div class="nodecontent" style="color:#00b439;font-size:133%;">Requisitos desenvolvidos</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1861931084FM"><div class="nodecontent" style="color:#990000;font-size:117%;">recebe dados pela api</div></li>
+	<li class="basic" id="FMID_1008032558FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Cria um uuid para cada requisição</div></li>
+	<li class="basic" id="FMID_352996847FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Envia mensagem para a fila</div></li></ul></li>
+	<li class="col" id="FMID_195397609FM"><div class="nodecontent" style="color:#00b439;font-size:133%;">Tecnologia</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1567916748FM"><div class="nodecontent" style="color:#990000;font-size:117%;">API Spring Produtora de Mensagens na Fila Rabbit</div></li></ul></li>
+	<li class="col" id="FMID_1565828204FM"><div class="nodecontent" style="color:#00b439;font-size:133%;">contrato</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_33924410FM"><div class="boxed"><div class="nodecontent" style="color:#990000;font-size:117%;">Entrada de Dados Json</div><div class="note-and-attributes"><span class="note"><p>
+      Dados de entrada vindo do BFF
+    </p><p>
+       "nomeSolicitante":
+    </p><p>
+         "email":
+    </p><p>
+         "material":
+    </p><p>
+         "endereco":
+    </p><p>
+         "numero":
+    </p><p>
+         "municipio":
+    </p><p>
+         "cep":
+    </p><p>
+         "reciclavel":
+    </p><p>
+         "dataLimite":
+    </p><p>
+         "quantidade":
+    </p></span></div></div></li>
+	<li class="basic" id="FMID_1242734039FM"><div class="boxed"><div class="nodecontent" style="color:#990000;font-size:117%;">saida de dados Mensagem</div><div class="note-and-attributes"><span class="note"><p><font color="#111111">UUID = Este registro será criado randomicamente a cada nova mensagem</font></p><p><font color="#111111">Nome</font></p><p><font color="#111111">Telefone</font></p><p><font color="#111111">E-mail</font></p><p><font color="#111111">CEP</font></p><p><font color="#111111">Endereço/numero/estado</font></p><p><font color="#111111">Material</font></p><p><font color="#111111">Quantidade</font></p><p><font color="#111111">Data Entrada</font></p></span></div></div></li></ul></li>
+	<li class="col" id="FMID_1610897655FM"><div class="nodecontent" style="color:#00b439;font-size:133%;">Teste e Análise de Ambiente</div>
+		<ul class="subexp">
+	<li class="col" id="FMID_1433343952FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Problemas</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1460005706FM"><div class="boxed"><div class="nodecontent" style="color:#111111;">Corrigir erro de conexão</div><div class="note-and-attributes"><span class="note"><p>
+      Quando o app está desligado não está avisando para o BFF, e isto ocorrerá em falha de inserção de dados,
+    </p><p>
+      para que não ocorra a perda de dados precisa consultar o producer antes de todo o processo, usando o link
+    </p><p>
+      http://localhost:9002/producer/actuator/health será retornado o estado da aplicação, exemplo: { "status": "UP" }<br /></p></span></div></div></li></ul></li></ul></li></ul></li>
+	<li class="col" id="FMID_1209219111FM"><div class="nodecontent" style="color:#0033ff;font-size:150%;">limpacity_listener</div>
+		<ul class="subexp">
+	<li class="col" id="FMID_1014212628FM"><div class="nodecontent" style="color:#00b439;font-size:133%;">Requisitos</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_304701577FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Lê a fila e insere os dados na API</div></li></ul></li>
+	<li class="col" id="FMID_1128323851FM"><div class="nodecontent" style="color:#00b439;font-size:133%;">Tecnologia</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_632778747FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Listener Spring com regras de negócio</div></li></ul></li>
+	<li class="col" id="FMID_12654754FM"><div class="nodecontent" style="color:#00b439;font-size:133%;">Contrato</div>
+		<ul class="subexp">
+	<li class="col" id="FMID_1812394298FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Mensagem da Fila Rabbit</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1386369753FM"><div class="nodecontent" style="color:#111111;">UUID</div></li>
+	<li class="basic" id="FMID_135774129FM"><div class="nodecontent" style="color:#111111;">Nome</div></li>
+	<li class="basic" id="FMID_297882527FM"><div class="nodecontent" style="color:#111111;">Telefone</div></li>
+	<li class="basic" id="FMID_1104905984FM"><div class="nodecontent" style="color:#111111;">E-mail</div></li>
+	<li class="basic" id="FMID_1849372346FM"><div class="nodecontent" style="color:#111111;">CEP</div></li>
+	<li class="basic" id="FMID_1816224612FM"><div class="nodecontent" style="color:#111111;">Endereço/numero/estado</div></li>
+	<li class="basic" id="FMID_763383172FM"><div class="nodecontent" style="color:#111111;">Material</div></li>
+	<li class="basic" id="FMID_842955411FM"><div class="nodecontent" style="color:#111111;">Quantidade</div></li>
+	<li class="basic" id="FMID_1304520311FM"><div class="nodecontent" style="color:#111111;">Data Entrada</div></li></ul></li></ul></li>
+	<li class="col" id="FMID_341964959FM"><div class="nodecontent" style="color:#00b439;font-size:133%;">Ações</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_402719599FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Criar regras para notificação em caso de falha do processo</div></li>
+	<li class="basic" id="FMID_1001131319FM"><div class="nodecontent" style="color:#990000;font-size:117%;">pesquisar como avisar o usuario do erro do processo</div></li></ul></li></ul></li>
+	<li class="col" id="FMID_641573474FM"><div class="nodecontent" style="color:#0033ff;font-size:150%;">limpacity_api</div>
+		<ul class="subexp">
+	<li class="col" id="FMID_1681482165FM"><div class="nodecontent" style="color:#00b439;font-size:133%;">Requisitos desenvolv</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1279009546FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Cadastro das entidades: Posto, Estação, Material, Coletador</div></li>
+	<li class="basic" id="FMID_1625398687FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Verifica se existe o material cadastrado</div></li>
+	<li class="basic" id="FMID_1381197775FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Valida se possui coletador para local</div></li>
+	<li class="basic" id="FMID_794812691FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Valida se possui coletador para o material</div></li>
+	<li class="basic" id="FMID_608107186FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Verificação de cidade habilitada</div></li></ul></li>
+	<li class="col" id="FMID_64895742FM"><div class="nodecontent" style="color:#00b439;font-size:133%;">Tecnologia</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1487569382FM"><div class="nodecontent" style="color:#990000;font-size:117%;">API spring para cadastros no banco</div></li></ul></li>
+	<li class="col" id="FMID_163025079FM"><div class="boxed"><div class="nodecontent" style="color:#00b439;font-size:133%;">Contrato</div><div class="note-and-attributes"><span class="note"><p>
+      ColetorController
+    </p><p>
+      Cadastra os tipos de coletor ou resíduos recicláveis
+    </p><p /><p>
+      DELETE
+    </p><p>
+      ​/api​/v1​/coletor​/{id}
+    </p><p /><p>
+      GET
+    </p><p>
+      ​/api​/v1​/coletor
+    </p><p /><p>
+      GET
+    </p><p>
+      ​/api​/v1​/coletor​/{nome}
+    </p><p /><p>
+      POST
+    </p><p>
+      ​/api​/v1​/coletor
+    </p><p /><p>
+      PUT
+    </p><p>
+      ​/api​/v1​/coletor​/{id}
+    </p><p /><p>
+      EstacaoController
+    </p><p>
+      Cadastra os tipos de estacao ou resíduos recicláveis
+    </p><p /><p /><p>
+      DELETE
+    </p><p>
+      ​/api​/v1​/estacao​/{id}
+    </p><p /><p>
+      GET
+    </p><p>
+      ​/api​/v1​/estacao
+    </p><p /><p>
+      GET
+    </p><p>
+      ​/api​/v1​/estacao​/{descricao}
+    </p><p /><p>
+      POST
+    </p><p>
+      ​/api​/v1​/estacao
+    </p><p /><p>
+      PUT
+    </p><p>
+      ​/api​/v1​/estacao​/{id}
+    </p><p /><p>
+      PostoColetaController
+    </p><p>
+      Cadastra os tipos de postocoleta ou resíduos recicláveis
+    </p><p /><p /><p>
+      DELETE
+    </p><p>
+      ​/api​/v1​/postocoleta​/{uuid}
+    </p><p /><p>
+      GET
+    </p><p>
+      ​/api​/v1​/postocoleta​/{uuid}
+    </p><p /><p>
+      GET
+    </p><p>
+      ​/api​/v1​/postocoleta
+    </p><p /><p>
+      GET
+    </p><p>
+      ​/api​/v1​/postocoleta​/tudo
+    </p><p /><p>
+      POST
+    </p><p>
+      ​/api​/v1​/postocoleta
+    </p><p /><p>
+      PUT
+    </p><p>
+      ​/api​/v1​/postocoleta​/{uuid}
+    </p><p /><p>
+      ColetaController
+    </p><p>
+      Repositório das coletas solicitadas
+    </p><p /><p /><p>
+      DELETE
+    </p><p>
+      ​/api​/v1​/coleta​/{uuid}
+    </p><p /><p>
+      GET
+    </p><p>
+      ​/api​/v1​/coleta
+    </p><p /><p>
+      POST
+    </p><p>
+      ​/api​/v1​/coleta
+    </p><p /><p>
+      PUT
+    </p><p>
+      ​/api​/v1​/coleta​/{uuid}
+    </p><p /><p>
+      EnderecoController
+    </p><p>
+      Consulta dados relacionados a endereços, se estão liberados para uso so sistema
+    </p><p /><p /><p>
+      GET
+    </p><p>
+      ​/api​/v1​/endereco​/nomemunicipio​/{nome}
+    </p><p /><p>
+      GET
+    </p><p>
+      ​/api​/v1​/endereco​/municipios
+    </p><p /><p>
+      GET
+    </p><p>
+      ​/api​/v1​/endereco​/codmunicipio​/{codigo}
+    </p><p /><p>
+      MaterialController
+    </p><p>
+      Cadastra os tipos de material ou resíduos recicláveis
+    </p><p /><p /><p>
+      DELETE
+    </p><p>
+      ​/api​/v1​/material​/{id}
+    </p><p /><p>
+      GET
+    </p><p>
+      ​/api​/v1​/material
+    </p><p /><p>
+      GET
+    </p><p>
+      ​/api​/v1​/material​/{descricao}
+    </p><p /><p>
+      POST
+    </p><p>
+      ​/api​/v1​/material
+    </p><p /><p>
+      PUT
+    </p><p>
+      ​/api​/v1​/material​/{id}
+    </p></span></div></div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1426470435FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Testar cada endpoint</div></li></ul></li></ul></li>
+	<li class="col" id="FMID_1238817756FM"><div class="nodecontent" style="color:#0033ff;font-size:150%;">limpacity_worker</div>
+		<ul class="subexp">
+	<li class="col" id="FMID_1232657093FM"><div class="nodecontent" style="color:#00b439;font-size:133%;">Requisitos</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1588242304FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Conecta no banco e executa sql preparando dados do dashboard</div></li>
+	<li class="basic" id="FMID_479343749FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Verifica coletas atrasadas e reenvia mensagens</div></li>
+	<li class="basic" id="FMID_1070453663FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Verifica coletas atrasadas e notifica solicitante</div></li>
+	<li class="basic" id="FMID_1220810774FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Envia relatório de atividades para Administradores</div></li>
+	<li class="basic" id="FMID_1497623975FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Verifica coletas atrasadas e bloqueia coletadores</div></li></ul></li>
+	<li class="col" id="FMID_1021008763FM"><div class="nodecontent" style="color:#00b439;font-size:133%;">Tecnologia</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_235038813FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Spring Batch</div></li></ul></li>
+	<li class="col" id="FMID_767100216FM"><div class="nodecontent" style="color:#00b439;font-size:133%;">Ações</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_837687136FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Criar estrutura de Worker</div></li>
+	<li class="basic" id="FMID_1426848898FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Criar agenda de processamento(skeduler)</div></li>
+	<li class="basic" id="FMID_1422640172FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Estudar como será marcado as tabelas já processadas</div></li>
+	<li class="basic" id="FMID_464943108FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Armazenar processos antes de depois</div></li>
+	<li class="basic" id="FMID_644327824FM"><div class="nodecontent" style="color:#990000;font-size:117%;">criar tabela de parametros de tempos e limites dos processos</div></li></ul></li></ul></li>
+	<li class="col" id="FMID_1561762560FM"><div class="nodecontent" style="color:#0033ff;font-size:150%;">limpacity_listener_mail</div>
+		<ul class="subexp">
+	<li class="col" id="FMID_1201168013FM"><div class="nodecontent" style="color:#00b439;font-size:133%;">Requisitos</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_829002576FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Lê na fila e envia os emails</div></li></ul></li>
+	<li class="col" id="FMID_982856760FM"><div class="nodecontent" style="color:#00b439;font-size:133%;">Tecnologia</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1701346749FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Listener Spring</div></li></ul></li>
+	<li class="col" id="FMID_274642826FM"><div class="nodecontent" style="color:#00b439;font-size:133%;">Ações</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_681071323FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Criar estrutura semelhante ao limpacity_listener</div></li>
+	<li class="basic" id="FMID_577033744FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Pesquisar ferramenta de envio de e-mail</div></li>
+	<li class="basic" id="FMID_1233663318FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Analisar quais campos a mensagem deve ter para envio do email</div></li></ul></li></ul></li>
+	<li class="col" id="FMID_1114776524FM"><div class="nodecontent" style="color:#0033ff;font-size:150%;">limpacity_listener_push</div>
+		<ul class="subexp">
+	<li class="col" id="FMID_56972858FM"><div class="nodecontent" style="color:#00b439;font-size:133%;">Requisitos</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_308628945FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Lê na fila e envia os Push Notifications</div></li></ul></li>
+	<li class="col" id="FMID_276311099FM"><div class="nodecontent" style="color:#00b439;font-size:133%;">Tecnologia</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1710922636FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Listener Spring</div></li></ul></li>
+	<li class="col" id="FMID_156816519FM"><div class="nodecontent" style="color:#00b439;font-size:133%;">Ações</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_650138870FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Criar estrutura semelhante ao limpacity_listener</div></li>
+	<li class="basic" id="FMID_1291791258FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Pesquisar ferramenta de envio de push-notification</div></li>
+	<li class="basic" id="FMID_436355464FM"><div class="nodecontent" style="color:#990000;font-size:117%;">Analisar quais campos o push deve ter </div></li></ul></li></ul></li></ul></li></ul></div></body></html>

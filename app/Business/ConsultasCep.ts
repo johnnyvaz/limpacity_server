@@ -1,24 +1,9 @@
-import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 const axios = require('axios')
 import Env from '@ioc:Adonis/Core/Env'
 const buscaCep = require('busca-cep')
 const enderecoApirUrl = Env.get('ENDERECO_URL')
-export default class EnderecoController {
-  /**
-   * @swagger
-   * /api/endereco/cep:
-   *   post:
-   *     description: Consulta se o cep permite coletas
-   *     tags:
-   *       - Endereco
-   *     parameters:
-   *       - name: cep
-   *         description: CEP object
-   *         in:  body
-   *         required: true
-   *         type: string
-   *         schema:
-   */
+
+export default class ConsultasCep {
 
   public async consultaCep(cep){
     var end: any;
@@ -33,7 +18,7 @@ export default class EnderecoController {
   }
 
 
-  public async getCep({ request }: HttpContextContract) {
+  public async getCep({ request }) {
     const data = request.only(['cep'])
     const cep = data.cep.replace(/\D/g, '')
     const endereco = await this.consultaCep(cep)

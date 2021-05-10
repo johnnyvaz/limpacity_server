@@ -1,11 +1,15 @@
 import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 const axios = require('axios')
 import Env from '@ioc:Adonis/Core/Env'
+const Business = require('../../Business/ConsultasCep')
 const buscaCep = require('busca-cep')
 const enderecoApirUrl = Env.get('ENDERECO_URL')
 const producerUrl = Env.get('PRODUCER_URL')
 
 export interface IObjetoColeta {
+  nomeSolicitante: string,
+  telefone: string,
+  email: string,
   material: string,
   endereco: string,
   numero: string,
@@ -30,7 +34,6 @@ export interface IEndereco {
     siafi: number
 }
 export default class SolicitaColetaController {
-  // private business: SolicitaColetaBusiness = new SolicitaColetaBusiness()
 
   /**
    * @swagger
@@ -68,6 +71,9 @@ export default class SolicitaColetaController {
 
   public async store({ request }: HttpContextContract) {
     const data:any = request.only([
+      'nomeSolicitante',
+      'telefone',
+      'email',
       'material',
       'endereco',
       'numero',
@@ -78,7 +84,10 @@ export default class SolicitaColetaController {
       'dataLimite',
       'quantidade'
     ]);
+    // console.log(data);
     // Busca cep
+    const busca = Business.ConsultasCep.getCep({"cep":"14402155"})
+    console.log("SolicitaColetaController ~ store ~ busca", busca)
     const cep = data.cep.replace(/\D/g, '');
     const endereco = await this.consultaCep(cep);
     // Consulta se o município é habilitado
@@ -94,6 +103,9 @@ export default class SolicitaColetaController {
     }
 
     const objetoColeta: IObjetoColeta = {
+      nomeSolicitante: data.nomeSolicitante,
+      telefone: data.telefone,
+      email: data.email,
       material: data.material,
       cep: data.cep,
       endereco: data.endereco === undefined ? endereco.logradouro : data.endereco,
@@ -104,15 +116,14 @@ export default class SolicitaColetaController {
       dataLimite: data.dataLimite,
       quantidade: data.quantidade
     }
-    console.log("objeto coleta: " + data.municipio );
     var solicitaColeta: any;
     try {
       solicitaColeta = await axios.post(producerUrl, objetoColeta)
+      console.log("aqui")
       return solicitaColeta.data
     } catch (error) {
       error.Request
     }
-
-    return objetoColeta
+    return solicitaColeta
   }
 }
