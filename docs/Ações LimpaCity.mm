@@ -79,6 +79,9 @@
 <node COLOR="#990000" CREATED="1618089629355" ID="ID_341121537" MODIFIED="1618089659803" TEXT="Levantar os requisitos necess&#xe1;rios integra&#xe7;&#xe3;o com Front-End">
 <font NAME="SansSerif" SIZE="14"/>
 </node>
+<node COLOR="#990000" CREATED="1620691022056" ID="ID_546334486" MODIFIED="1620691045814" TEXT="Criar endpoint para receber QR Code">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
 </node>
 <node COLOR="#00b439" CREATED="1617622996673" ID="ID_1390775626" MODIFIED="1618089684271" TEXT="Requisitos implementados">
 <edge STYLE="bezier" WIDTH="thin"/>
@@ -308,7 +311,7 @@
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
-<node COLOR="#00b439" CREATED="1617931530007" ID="ID_163025079" MODIFIED="1618163353926" TEXT="Contrato">
+<node COLOR="#00b439" CREATED="1617931530007" ID="ID_163025079" MODIFIED="1621078701232" TEXT="Contrato">
 <richcontent TYPE="NOTE"><html>
   <head>
     

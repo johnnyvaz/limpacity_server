@@ -3,7 +3,7 @@
 <node COLOR="#000000" CREATED="1617327561613" ID="ID_860381294" MODIFIED="1617327597794" TEXT="Api Gest&#xe3;o de Res&#xed;duos">
 <font NAME="SansSerif" SIZE="20"/>
 <hook NAME="accessories/plugins/AutomaticLayout.properties"/>
-<node COLOR="#0033ff" CREATED="1617327664827" ID="ID_1798638459" MODIFIED="1617624716471" POSITION="left" TEXT="Mensageria">
+<node COLOR="#0033ff" CREATED="1617327664827" ID="ID_1798638459" MODIFIED="1617624716471" POSITION="right" TEXT="Mensageria">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <node COLOR="#00b439" CREATED="1617327672869" ID="ID_1915300314" MODIFIED="1617327677623" TEXT="Rabbit MQ">
@@ -17,15 +17,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1617332121921" ID="ID_1386907597" MODIFIED="1617332126878" POSITION="right" TEXT="Banco de Dados">
-<edge STYLE="sharp_bezier" WIDTH="8"/>
-<font NAME="SansSerif" SIZE="18"/>
-<node COLOR="#00b439" CREATED="1617332128134" ID="ID_1749434" MODIFIED="1617332131826" TEXT="Mysql">
-<edge STYLE="bezier" WIDTH="thin"/>
-<font NAME="SansSerif" SIZE="16"/>
-</node>
-</node>
-<node COLOR="#0033ff" CREATED="1617334462613" ID="ID_1002715141" MODIFIED="1617624720819" POSITION="left" TEXT="Tipo de Processos">
+<node COLOR="#0033ff" CREATED="1617334462613" ID="ID_1002715141" MODIFIED="1617624720819" POSITION="right" TEXT="Tipo de Processos">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <node COLOR="#00b439" CREATED="1617334487606" ID="ID_1497939162" MODIFIED="1617334491520" TEXT="Ass&#xed;ncrono">
@@ -33,6 +25,14 @@
 <font NAME="SansSerif" SIZE="16"/>
 </node>
 <node COLOR="#00b439" CREATED="1617334493382" ID="ID_494452381" MODIFIED="1617334496543" TEXT="S&#xed;ncrono">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+</node>
+<node COLOR="#0033ff" CREATED="1617332121921" ID="ID_1386907597" MODIFIED="1617332126878" POSITION="right" TEXT="Banco de Dados">
+<edge STYLE="sharp_bezier" WIDTH="8"/>
+<font NAME="SansSerif" SIZE="18"/>
+<node COLOR="#00b439" CREATED="1617332128134" ID="ID_1749434" MODIFIED="1617332131826" TEXT="Mysql">
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 </node>
@@ -152,9 +152,6 @@
 <node COLOR="#111111" CREATED="1617922928748" ID="ID_1242734039" MODIFIED="1617923090764" TEXT="saida de dados Mensagem"/>
 <node COLOR="#111111" CREATED="1617923070210" ID="ID_33924410" MODIFIED="1617923080575" TEXT="Entrada de Dados Json"/>
 </node>
-<node COLOR="#990000" CREATED="1617923145640" ID="ID_224894738" MODIFIED="1617923151994" TEXT="Infraestrutura">
-<font NAME="SansSerif" SIZE="14"/>
-</node>
 </node>
 <node COLOR="#00b439" CREATED="1617385168928" ID="ID_1209219111" MODIFIED="1617669604010" TEXT="limpacity_listener">
 <edge STYLE="bezier" WIDTH="thin"/>
@@ -235,17 +232,30 @@
 <font NAME="SansSerif" SIZE="16"/>
 <node COLOR="#990000" CREATED="1617622996673" ID="ID_1390775626" MODIFIED="1617623002361" TEXT="Requisitos">
 <font NAME="SansSerif" SIZE="14"/>
-<node COLOR="#111111" CREATED="1617622885680" ID="ID_1825803125" MODIFIED="1617623227239" TEXT="cadastro de endere&#xe7;o com busca de cep ">
+<node COLOR="#111111" CREATED="1617622885680" ID="ID_1825803125" MODIFIED="1621110416259" TEXT="cadastro de endere&#xe7;o com busca de cep ">
 <font NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="button_ok"/>
 </node>
 <node COLOR="#111111" CREATED="1617623389057" ID="ID_641814323" MODIFIED="1617624784442" TEXT="Insere solicita&#xe7;&#xe3;o de coleta( Fluxo Ass&#xed;ncrono)"/>
 <node COLOR="#111111" CREATED="1617623589403" ID="ID_1680761404" MODIFIED="1617623667257" TEXT="Comunica&#xe7;&#xe3;o com a API nos endpoints liberados para fluxo s&#xed;ncrono"/>
-<node COLOR="#111111" CREATED="1617623675101" ID="ID_1198140502" MODIFIED="1617623717599" TEXT="Cadastro de usuario"/>
-<node COLOR="#111111" CREATED="1617623719568" ID="ID_1607898888" MODIFIED="1617623744932" TEXT="Sistema ACL, Controle de Perfil de Acesso"/>
+<node COLOR="#111111" CREATED="1617623675101" ID="ID_1198140502" MODIFIED="1621111063785" TEXT="Cadastro de usuario">
+<icon BUILTIN="button_ok"/>
+</node>
+<node COLOR="#111111" CREATED="1617623719568" ID="ID_1607898888" MODIFIED="1621111067361" TEXT="Sistema ACL, Controle de Perfil de Acesso">
+<icon BUILTIN="button_ok"/>
+</node>
+<node COLOR="#111111" CREATED="1621093170966" ID="ID_1696799322" MODIFIED="1621109881399" TEXT="Aceite das coletas ">
+<icon BUILTIN="button_ok"/>
+</node>
+<node COLOR="#111111" CREATED="1617623389057" ID="ID_605611711" MODIFIED="1621109858988" TEXT="Insere solicita&#xe7;&#xe3;o de coleta baseado no QRCode">
+<icon BUILTIN="button_ok"/>
+</node>
 </node>
 <node COLOR="#990000" CREATED="1617623004478" ID="ID_821103977" MODIFIED="1617623251056" TEXT="Tecnologia">
 <font NAME="SansSerif" SIZE="14"/>
-<node COLOR="#111111" CREATED="1617623252856" ID="ID_1654422844" MODIFIED="1617623377222" TEXT="Adonisjs, Typescript"/>
+<node COLOR="#111111" CREATED="1617623252856" ID="ID_1654422844" MODIFIED="1621111070333" TEXT="Adonisjs, Typescript">
+<icon BUILTIN="button_ok"/>
+</node>
 </node>
 </node>
 </node>
