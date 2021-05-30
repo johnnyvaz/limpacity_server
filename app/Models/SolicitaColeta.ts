@@ -1,5 +1,6 @@
 // import { DateTime } from 'luxon'
-import { BaseModel } from '@ioc:Adonis/Lucid/Orm'
+import {BaseModel, column} from '@ioc:Adonis/Lucid/Orm'
+import {DateTime} from "luxon";
 
 export default class SolicitaColeta extends BaseModel {
   /**
@@ -8,7 +9,7 @@ export default class SolicitaColeta extends BaseModel {
    *    SolicitaColeta:
    *      type: object
    *      properties:
-   *       nomeSolicitante:
+   *       observacao:
    *         type: string
    *       telefone:
    *         type: string

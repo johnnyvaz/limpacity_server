@@ -133,18 +133,67 @@
 <node COLOR="#0033ff" CREATED="1617385027289" ID="ID_827839949" MODIFIED="1617387333351" POSITION="left" TEXT="MicroServi&#xe7;os">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
+<node COLOR="#00b439" CREATED="1617622982461" ID="ID_191210877" MODIFIED="1617622989605" TEXT="limpacity_server">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1617622996673" ID="ID_1390775626" MODIFIED="1617623002361" TEXT="Requisitos">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1617622885680" ID="ID_1825803125" MODIFIED="1621110416259" TEXT="cadastro de endere&#xe7;o com busca de cep ">
+<font NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="button_ok"/>
+</node>
+<node COLOR="#111111" CREATED="1617623389057" ID="ID_641814323" MODIFIED="1621112182811" TEXT="Insere solicita&#xe7;&#xe3;o de coleta sem QRCode">
+<icon BUILTIN="button_ok"/>
+</node>
+<node COLOR="#111111" CREATED="1617623675101" ID="ID_1198140502" MODIFIED="1621111063785" TEXT="Cadastro de usuario">
+<icon BUILTIN="button_ok"/>
+</node>
+<node COLOR="#111111" CREATED="1617623719568" ID="ID_1607898888" MODIFIED="1621111067361" TEXT="Sistema ACL, Controle de Perfil de Acesso">
+<icon BUILTIN="button_ok"/>
+</node>
+<node COLOR="#111111" CREATED="1621093170966" ID="ID_1696799322" MODIFIED="1621109881399" TEXT="Aceite das coletas ">
+<icon BUILTIN="button_ok"/>
+</node>
+<node COLOR="#111111" CREATED="1617623389057" ID="ID_605611711" MODIFIED="1621109858988" TEXT="Insere solicita&#xe7;&#xe3;o de coleta baseado no QRCode">
+<icon BUILTIN="button_ok"/>
+</node>
+<node COLOR="#111111" CREATED="1621112072602" ID="ID_350306370" MODIFIED="1621112083876" TEXT="Emiss&#xe3;o de QRCode">
+<icon BUILTIN="button_ok"/>
+</node>
+<node COLOR="#111111" CREATED="1621112091755" ID="ID_1879568166" MODIFIED="1621112146346" TEXT="Cadastro de Posto de Coleta">
+<icon BUILTIN="button_ok"/>
+</node>
+<node COLOR="#111111" CREATED="1621112102619" ID="ID_1912702965" MODIFIED="1621112149034" TEXT="Cadastro de Esta&#xe7;&#xe3;o de Coleta">
+<icon BUILTIN="button_ok"/>
+</node>
+<node COLOR="#111111" CREATED="1621112114002" ID="ID_1759453301" MODIFIED="1621112142198" TEXT="Habilita&#xe7;&#xe3;o de Munic&#xed;pio">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node COLOR="#990000" CREATED="1617623004478" ID="ID_821103977" MODIFIED="1617623251056" TEXT="Tecnologia">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1617623252856" ID="ID_1654422844" MODIFIED="1621111070333" TEXT="Adonisjs, Typescript">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+</node>
 <node COLOR="#00b439" CREATED="1617385044809" ID="ID_543164937" MODIFIED="1617386501930" TEXT="limpacity_producer">
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 <node COLOR="#990000" CREATED="1617385055879" ID="ID_733638615" MODIFIED="1617385076502" TEXT="Requisitos">
 <font NAME="SansSerif" SIZE="14"/>
-<node COLOR="#111111" CREATED="1617385077751" ID="ID_1861931084" MODIFIED="1617385098470" TEXT="recebe dados e envia para fila"/>
-<node COLOR="#111111" CREATED="1617489747024" ID="ID_1008032558" MODIFIED="1617489771861" TEXT="Cria um uuid para cada requisi&#xe7;&#xe3;o"/>
+<node COLOR="#111111" CREATED="1617385077751" ID="ID_1861931084" MODIFIED="1621116150250" TEXT="recebe dados e envia para fila">
+<icon BUILTIN="button_ok"/>
+</node>
+<node COLOR="#111111" CREATED="1617489747024" ID="ID_1008032558" MODIFIED="1621116152446" TEXT="Cria um uuid para cada requisi&#xe7;&#xe3;o">
+<icon BUILTIN="button_ok"/>
+</node>
 </node>
 <node COLOR="#990000" CREATED="1617386858884" ID="ID_195397609" MODIFIED="1617386863301" TEXT="Tecnologia">
 <font NAME="SansSerif" SIZE="14"/>
-<node COLOR="#111111" CREATED="1617386636291" ID="ID_1567916748" MODIFIED="1617386923541" TEXT="API Spring Produtora de Mensagens na Fila Rabbit">
+<node COLOR="#111111" CREATED="1617386636291" ID="ID_1567916748" MODIFIED="1621116158114" TEXT="API Spring Produtora de Mensagens na Fila Rabbit">
 <font NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="button_ok"/>
 </node>
 </node>
 <node COLOR="#990000" CREATED="1617922917752" ID="ID_1565828204" MODIFIED="1617923065850" TEXT="contrato">
@@ -158,7 +207,9 @@
 <font NAME="SansSerif" SIZE="16"/>
 <node COLOR="#990000" CREATED="1617385192385" ID="ID_1014212628" MODIFIED="1617385200991" TEXT="Requisitos">
 <font NAME="SansSerif" SIZE="14"/>
-<node COLOR="#111111" CREATED="1617385203687" ID="ID_304701577" MODIFIED="1617492506887" TEXT="L&#xea; a fila e insere os dados na API"/>
+<node COLOR="#111111" CREATED="1617385203687" ID="ID_304701577" MODIFIED="1621117869828" TEXT="L&#xea; a fila e insere os dados na API">
+<icon BUILTIN="button_ok"/>
+</node>
 </node>
 <node COLOR="#990000" CREATED="1617386858884" ID="ID_1128323851" MODIFIED="1617386863301" TEXT="Tecnologia">
 <font NAME="SansSerif" SIZE="14"/>
@@ -172,11 +223,17 @@
 <font NAME="SansSerif" SIZE="16"/>
 <node COLOR="#990000" CREATED="1617385729074" ID="ID_1681482165" MODIFIED="1617385758392" TEXT="Requisitos">
 <font NAME="SansSerif" SIZE="14"/>
-<node COLOR="#111111" CREATED="1617385760118" ID="ID_1279009546" MODIFIED="1617385926735" TEXT="Cadastro das entidades: Posto, Esta&#xe7;&#xe3;o, Material, Coletador"/>
-<node COLOR="#111111" CREATED="1617385239706" ID="ID_1625398687" MODIFIED="1617385263707" TEXT="Verifica se existe o material cadastrado"/>
+<node COLOR="#111111" CREATED="1617385760118" ID="ID_1279009546" MODIFIED="1621125350847" TEXT="Cadastro das entidades: Posto, Esta&#xe7;&#xe3;o, Material, Coletador">
+<icon BUILTIN="button_ok"/>
+</node>
+<node COLOR="#111111" CREATED="1617385239706" ID="ID_1625398687" MODIFIED="1621125555579" TEXT="Verifica se existe o material cadastrado">
+<icon BUILTIN="button_ok"/>
+</node>
 <node COLOR="#111111" CREATED="1617385267938" ID="ID_1381197775" MODIFIED="1617385290089" TEXT="Valida se possui coletador para local"/>
 <node COLOR="#111111" CREATED="1617385292124" ID="ID_794812691" MODIFIED="1617385306264" TEXT="Valida se possui coletador para o material"/>
-<node COLOR="#111111" CREATED="1617621947881" ID="ID_608107186" MODIFIED="1617622087936" TEXT="Verifica&#xe7;&#xe3;o de cidade habilitada"/>
+<node COLOR="#111111" CREATED="1617621947881" ID="ID_608107186" MODIFIED="1621125574217" TEXT="Verifica&#xe7;&#xe3;o de cidade habilitada">
+<icon BUILTIN="button_ok"/>
+</node>
 </node>
 <node COLOR="#990000" CREATED="1617386858884" ID="ID_64895742" MODIFIED="1617386863301" TEXT="Tecnologia">
 <font NAME="SansSerif" SIZE="14"/>
@@ -190,11 +247,15 @@
 <font NAME="SansSerif" SIZE="16"/>
 <node COLOR="#990000" CREATED="1617385962799" ID="ID_1201168013" MODIFIED="1617385966227" TEXT="Requisitos">
 <font NAME="SansSerif" SIZE="14"/>
-<node COLOR="#111111" CREATED="1617385966969" ID="ID_829002576" MODIFIED="1617385986359" TEXT="L&#xea; na fila e envia os emails"/>
+<node COLOR="#111111" CREATED="1617385966969" ID="ID_829002576" MODIFIED="1621125589201" TEXT="L&#xea; na fila e envia os emails">
+<icon BUILTIN="button_ok"/>
+</node>
 </node>
 <node COLOR="#990000" CREATED="1617386858884" ID="ID_982856760" MODIFIED="1617386863301" TEXT="Tecnologia">
 <font NAME="SansSerif" SIZE="14"/>
-<node COLOR="#111111" CREATED="1617387202806" ID="ID_1701346749" MODIFIED="1617387208648" TEXT="Listener Spring"/>
+<node COLOR="#111111" CREATED="1617387202806" ID="ID_1701346749" MODIFIED="1621125592121" TEXT="Listener Spring">
+<icon BUILTIN="button_ok"/>
+</node>
 </node>
 </node>
 <node COLOR="#00b439" CREATED="1617385931336" ID="ID_1114776524" MODIFIED="1617386601544" TEXT="limpacity_listener_push">
@@ -202,11 +263,15 @@
 <font NAME="SansSerif" SIZE="16"/>
 <node COLOR="#990000" CREATED="1617385962799" ID="ID_56972858" MODIFIED="1617385966227" TEXT="Requisitos">
 <font NAME="SansSerif" SIZE="14"/>
-<node COLOR="#111111" CREATED="1617385966969" ID="ID_308628945" MODIFIED="1617386041910" TEXT="L&#xea; na fila e envia os Push Notifications"/>
+<node COLOR="#111111" CREATED="1617385966969" ID="ID_308628945" MODIFIED="1621125595098" TEXT="L&#xea; na fila e envia os Push Notifications">
+<icon BUILTIN="button_ok"/>
+</node>
 </node>
 <node COLOR="#990000" CREATED="1617386858884" ID="ID_276311099" MODIFIED="1617386863301" TEXT="Tecnologia">
 <font NAME="SansSerif" SIZE="14"/>
-<node COLOR="#111111" CREATED="1617387202806" ID="ID_1710922636" MODIFIED="1617387208648" TEXT="Listener Spring"/>
+<node COLOR="#111111" CREATED="1617387202806" ID="ID_1710922636" MODIFIED="1621125597801" TEXT="Listener Spring">
+<icon BUILTIN="button_ok"/>
+</node>
 </node>
 </node>
 <node COLOR="#00b439" CREATED="1617386056618" ID="ID_1238817756" MODIFIED="1617386625704" TEXT="limpacity_worker">
@@ -224,37 +289,6 @@
 <font NAME="SansSerif" SIZE="14"/>
 <node COLOR="#111111" CREATED="1617386732843" ID="ID_235038813" MODIFIED="1617386889489" TEXT="Spring Batch">
 <font NAME="SansSerif" SIZE="12"/>
-</node>
-</node>
-</node>
-<node COLOR="#00b439" CREATED="1617622982461" ID="ID_191210877" MODIFIED="1617622989605" TEXT="limpacity_server">
-<edge STYLE="bezier" WIDTH="thin"/>
-<font NAME="SansSerif" SIZE="16"/>
-<node COLOR="#990000" CREATED="1617622996673" ID="ID_1390775626" MODIFIED="1617623002361" TEXT="Requisitos">
-<font NAME="SansSerif" SIZE="14"/>
-<node COLOR="#111111" CREATED="1617622885680" ID="ID_1825803125" MODIFIED="1621110416259" TEXT="cadastro de endere&#xe7;o com busca de cep ">
-<font NAME="SansSerif" SIZE="12"/>
-<icon BUILTIN="button_ok"/>
-</node>
-<node COLOR="#111111" CREATED="1617623389057" ID="ID_641814323" MODIFIED="1617624784442" TEXT="Insere solicita&#xe7;&#xe3;o de coleta( Fluxo Ass&#xed;ncrono)"/>
-<node COLOR="#111111" CREATED="1617623589403" ID="ID_1680761404" MODIFIED="1617623667257" TEXT="Comunica&#xe7;&#xe3;o com a API nos endpoints liberados para fluxo s&#xed;ncrono"/>
-<node COLOR="#111111" CREATED="1617623675101" ID="ID_1198140502" MODIFIED="1621111063785" TEXT="Cadastro de usuario">
-<icon BUILTIN="button_ok"/>
-</node>
-<node COLOR="#111111" CREATED="1617623719568" ID="ID_1607898888" MODIFIED="1621111067361" TEXT="Sistema ACL, Controle de Perfil de Acesso">
-<icon BUILTIN="button_ok"/>
-</node>
-<node COLOR="#111111" CREATED="1621093170966" ID="ID_1696799322" MODIFIED="1621109881399" TEXT="Aceite das coletas ">
-<icon BUILTIN="button_ok"/>
-</node>
-<node COLOR="#111111" CREATED="1617623389057" ID="ID_605611711" MODIFIED="1621109858988" TEXT="Insere solicita&#xe7;&#xe3;o de coleta baseado no QRCode">
-<icon BUILTIN="button_ok"/>
-</node>
-</node>
-<node COLOR="#990000" CREATED="1617623004478" ID="ID_821103977" MODIFIED="1617623251056" TEXT="Tecnologia">
-<font NAME="SansSerif" SIZE="14"/>
-<node COLOR="#111111" CREATED="1617623252856" ID="ID_1654422844" MODIFIED="1621111070333" TEXT="Adonisjs, Typescript">
-<icon BUILTIN="button_ok"/>
 </node>
 </node>
 </node>

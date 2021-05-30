@@ -7,7 +7,8 @@
     "start": "node server.ts",
     "start:dev": "node ace serve --watch",
     "lint": "eslint . --ext=.ts",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "postbuild": "node ace swagger:generate && cp -a docs/ build/docs"
   },
   "devDependencies": {
     "@adonisjs/assembler": "^3.0.0",
